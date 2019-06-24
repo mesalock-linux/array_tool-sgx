@@ -5,6 +5,10 @@
 // http://opensource.org/licenses/MIT>, at your option. This file may not be
 // copied, modified, or distributed except according to those terms.
 
+use alloc::vec::Vec;
+use alloc::string::String;
+use alloc::string::ToString;
+
 /// A grapheme iterator that produces the bytes for each grapheme.
 #[derive(Debug)]
 pub struct GraphemeBytesIter<'a> {
@@ -286,7 +290,7 @@ impl WordWrap for &'static str {
               if offset+chunk < t.len() { // String may continue
                 wordwrap(t, chunk, offset+1, mrkrs) // Recurse + 1 until next space
               } else {
-                use string::SubstMarks;
+                //use string::SubstMarks;
 
                 return t.subst_marks(mrkrs.to_vec(), "\n")
               }

@@ -1,5 +1,5 @@
-use std::cmp;
-use std::iter::IntoIterator;
+use core::cmp;
+use core::iter::IntoIterator;
 
 #[doc(hidden)]
 #[derive(Clone, Debug)]

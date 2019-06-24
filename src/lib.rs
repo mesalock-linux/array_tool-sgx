@@ -30,6 +30,14 @@
 //! This crate is not limited to just Vector methods and has some helpful
 //! string methods as well.
 
+#![no_std]
+
+#[cfg(test)]
+extern crate std;
+
+#[macro_use]
+extern crate alloc;
+use alloc::vec::Vec;
 
 /// Array Tool provides useful methods for iterators 
 pub mod iter;

@@ -5,6 +5,10 @@
 // http://opensource.org/licenses/MIT>, at your option. This file may not be
 // copied, modified, or distributed except according to those terms.
 
+use alloc::vec::Vec;
+use alloc::string::String;
+use alloc::string::ToString;
+
 /// Several different methods for getting, or evaluating, uniqueness.
 pub trait Uniq<T> {
   /// `uniq` returns a vector of unique values within itself as compared to
